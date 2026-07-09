@@ -1,0 +1,26 @@
+{
+  "name": "medplum-jp-core",
+  "version": "1.0.0",
+  "scripts": {
+    "fetch": "tsx src/fetch.ts ./data",
+    "deploy": "tsx src/deploy.ts ./data",
+    "deploy-terminology": "tsx src/deploy-terminology.ts ./data",
+    "deploy-examples": "tsx src/deploy-examples.ts ./data/example"
+  },
+  "dependencies": {
+    "@medplum/core": "^5.1.23",
+    "@medplum/fhirtypes": "^5.1.23",
+    "dotenv": "^17.4.2",
+    "tar": "^7.5.19"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.4",
+    "@types/tar": "^6.1.13",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "fsevents": true
+  }
+}

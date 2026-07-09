@@ -1,0 +1,1128 @@
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:cc5b3007-9811-5a70-97c5-cb6a90bf93e3",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example-hospital.jp/practitioner-id",
+            "value": "DR001"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "usual",
+            "text": "大阪 一郎",
+            "family": "大阪",
+            "given": [
+              "一郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "usual",
+            "text": "オオサカ イチロウ",
+            "family": "オオサカ",
+            "given": [
+              "イチロウ"
+            ]
+          }
+        ],
+        "gender": "male",
+        "qualification": [
+          {
+            "identifier": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber",
+                "value": "999999-00001"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicalLicenseCertificate_CS",
+                  "code": "medical-registration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner",
+        "ifNoneExist": "identifier=http://example-hospital.jp/practitioner-id|DR001"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b06bca92-33ee-51d5-b23a-fb8d76a23d52",
+      "resource": {
+        "resourceType": "Practitioner",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://example-hospital.jp/practitioner-id",
+            "value": "DR002"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "usual",
+            "text": "東京 春子",
+            "family": "東京",
+            "given": [
+              "春子"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "usual",
+            "text": "トウキョウ ハルコ",
+            "family": "トウキョウ",
+            "given": [
+              "ハルコ"
+            ]
+          }
+        ],
+        "gender": "female",
+        "qualification": [
+          {
+            "identifier": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber",
+                "value": "999999-00002"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicalLicenseCertificate_CS",
+                  "code": "medical-registration"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Practitioner",
+        "ifNoneExist": "identifier=http://example-hospital.jp/practitioner-id|DR002"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5ab8a665-833b-51a1-bc64-9577fbd428e0",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo",
+            "valueCoding": {
+              "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/PrefectureNo-2digits",
+              "code": "13"
+            }
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory",
+            "valueCoding": {
+              "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationFeeScoreType",
+              "code": "1"
+            }
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo",
+            "valueIdentifier": {
+              "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID",
+              "value": "9876543"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no",
+            "value": "1319876543"
+          }
+        ],
+        "name": "健康第一病院",
+        "address": [
+          {
+            "text": "東京都文京区本郷Y-Y-Y",
+            "line": [
+              "本郷Y-Y-Y"
+            ],
+            "city": "文京区",
+            "state": "東京都",
+            "country": "JPN"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization",
+        "ifNoneExist": "identifier=http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no|1319876543"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d74548df-982e-5ff2-ab24-47ca105e672d",
+      "resource": {
+        "resourceType": "Organization",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber",
+            "value": "7654321"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "pay",
+                "display": "Payer"
+              }
+            ]
+          }
+        ],
+        "name": "ひまわり健康保険組合"
+      },
+      "request": {
+        "method": "POST",
+        "url": "Organization",
+        "ifNoneExist": "identifier=http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber|7654321"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91",
+      "resource": {
+        "resourceType": "Patient",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-religion",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation",
+                  "code": "1013",
+                  "display": "Christian (non-Catholic, non-specific)"
+                }
+              ]
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/patient-birthPlace",
+            "valueAddress": {
+              "state": "大阪"
+            }
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-Race",
+                  "code": "2039-6",
+                  "display": "Japanese"
+                }
+              ]
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.51.11311234567",
+            "value": "00000021"
+          },
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Patient"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "usual",
+            "text": "佐藤 花子",
+            "family": "佐藤",
+            "given": [
+              "花子"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "usual",
+            "text": "サトウ ハナコ",
+            "family": "サトウ",
+            "given": [
+              "ハナコ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "09012345678",
+            "use": "mobile"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1985-07-15",
+        "address": [
+          {
+            "text": "大阪府大阪市北区梅田Z-Z-Z",
+            "line": [
+              "梅田Z-Z-Z"
+            ],
+            "city": "大阪市北区",
+            "state": "大阪府",
+            "postalCode": "530-0001"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Patient",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Patient"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bbe69db8-c9bd-52d9-be1f-7b102d016a8a",
+      "resource": {
+        "resourceType": "Coverage",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol",
+            "valueString": "かきく"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber",
+            "valueString": "４５６"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber",
+            "valueString": "02"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID",
+            "value": "00023456:かきく:４５６:02"
+          },
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Coverage"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+              "code": "PUBLICPOL"
+            }
+          ]
+        },
+        "subscriberId": "かきく:４５６",
+        "beneficiary": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "dependent": "01",
+        "payor": [
+          {
+            "reference": "urn:uuid:d74548df-982e-5ff2-ab24-47ca105e672d"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Coverage",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Coverage"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:72cc9136-cab4-5ca8-89a0-20dec031230b",
+      "resource": {
+        "resourceType": "Encounter",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter"
+          ]
+        },
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "AMB"
+        },
+        "subject": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "participant": [
+          {
+            "individual": {
+              "reference": "urn:uuid:b06bca92-33ee-51d5-b23a-fb8d76a23d52"
+            }
+          }
+        ],
+        "period": {
+          "start": "2023-03-05T10:15:00+09:00",
+          "end": "2023-03-05T10:40:00+09:00"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:5ab8a665-833b-51a1-bc64-9577fbd428e0"
+        },
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Encounter"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Encounter",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Encounter"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:36d8f707-911d-5c5f-9206-6bf4f61696ef",
+      "resource": {
+        "resourceType": "Condition",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition_Diagnosis"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item"
+              }
+            ]
+          }
+        ],
+        "severity": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS",
+              "code": "MO",
+              "display": "中度"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://medis.or.jp/CodeSystem/master-disease-exCode",
+              "code": "URSQ",
+              "display": "本態性高血圧症"
+            }
+          ],
+          "text": "本態性高血圧症"
+        },
+        "subject": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "onsetDateTime": "2021-06-20",
+        "recordedDate": "2021-06-20",
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Condition"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Condition",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Condition"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5caff025-bbd4-5596-830f-809c807b0b45",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance"
+          ]
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "type": "allergy",
+        "category": [
+          "food"
+        ],
+        "criticality": "low",
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS",
+              "code": "J9FB13110000",
+              "display": "鶏卵"
+            }
+          ],
+          "text": "鶏卵"
+        },
+        "patient": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "reaction": [
+          {
+            "manifestation": [
+              {
+                "text": "口腔内違和感"
+              }
+            ],
+            "severity": "mild"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:AllergyIntolerance"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "AllergyIntolerance",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:AllergyIntolerance"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ae739ab8-608d-54c9-97b1-92ca2ed75e87",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "vital-signs",
+                "display": "Vital Signs"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+                "code": "respiratory-function",
+                "display": "呼吸機能"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://medis.or.jp/CodeSystem/master-nursingObservationKeyCode",
+              "code": "31001369",
+              "display": "呼吸数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "encounter": {
+          "reference": "urn:uuid:72cc9136-cab4-5ca8-89a0-20dec031230b"
+        },
+        "effectiveDateTime": "2023-03-05T10:15:00+09:00",
+        "performer": [
+          {
+            "reference": "urn:uuid:cc5b3007-9811-5a70-97c5-cb6a90bf93e3"
+          }
+        ],
+        "valueQuantity": {
+          "value": 18,
+          "unit": "回"
+        },
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Obs-vitals"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Obs-vitals"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3f046bb1-39b1-5037-9fd7-66c2a25fe940",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "body-measurement",
+                "display": "Body Measurement"
+              }
+            ]
+          },
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS",
+                "code": "weight",
+                "display": "体重"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS",
+              "code": "31000296"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "encounter": {
+          "reference": "urn:uuid:72cc9136-cab4-5ca8-89a0-20dec031230b"
+        },
+        "effectiveDateTime": "2023-03-05T10:15:00+09:00",
+        "performer": [
+          {
+            "reference": "urn:uuid:cc5b3007-9811-5a70-97c5-cb6a90bf93e3"
+          }
+        ],
+        "valueQuantity": {
+          "value": 54.0,
+          "unit": "kg"
+        },
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Obs-weight"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Obs-weight"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:855967a0-87f3-5025-b5e5-849a44168b69",
+      "resource": {
+        "resourceType": "Specimen",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common"
+          ]
+        },
+        "status": "available",
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0487",
+              "code": "UR"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "receivedTime": "2023-03-05T09:30:00+09:00",
+        "container": [
+          {
+            "description": "採尿容器",
+            "type": {
+              "text": "採尿容器"
+            },
+            "capacity": {
+              "value": 50,
+              "unit": "mL"
+            },
+            "specimenQuantity": {
+              "value": 40,
+              "unit": "mL"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Specimen"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Specimen",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Specimen"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:60a8634a-1a62-544a-9f81-93dd0e5e2c2c",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://medis.or.jp/CodeSystem/master-JLAC10-17digits",
+              "code": "3C020000002327101"
+            }
+          ],
+          "text": "尿酸"
+        },
+        "subject": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "effectiveDateTime": "2023-03-05",
+        "performer": [
+          {
+            "reference": "urn:uuid:b06bca92-33ee-51d5-b23a-fb8d76a23d52"
+          }
+        ],
+        "valueQuantity": {
+          "value": 4.2,
+          "unit": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
+                "code": "N",
+                "display": "Normal"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 2.1
+            },
+            "high": {
+              "value": 7.0
+            }
+          }
+        ],
+        "specimen": {
+          "reference": "urn:uuid:855967a0-87f3-5025-b5e5-849a44168b69"
+        },
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Obs-lab"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Obs-lab"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4581ff9a-b3a9-592f-ab47-bbb780e148a9",
+      "resource": {
+        "resourceType": "Observation",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory"
+          ]
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS",
+                "code": "social-history",
+                "display": "Social History"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+              "code": "MD0012920",
+              "display": "喫煙指数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "effectiveDateTime": "2023-03-05T10:15:00+09:00",
+        "performer": [
+          {
+            "reference": "urn:uuid:b06bca92-33ee-51d5-b23a-fb8d76a23d52"
+          }
+        ],
+        "valueQuantity": {
+          "value": 0
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+                  "code": "MD0012910",
+                  "display": "通算喫煙年数"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 0,
+              "unit": "年"
+            }
+          },
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+                  "code": "MD0012900",
+                  "display": "１日の喫煙本数"
+                }
+              ]
+            },
+            "valueQuantity": {
+              "value": 0,
+              "unit": "本"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Obs-social"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Observation",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Obs-social"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:66719603-987b-52fa-be1f-ad6400658a9b",
+      "resource": {
+        "resourceType": "Immunization",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
+          ]
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate",
+            "valueDate": "2022-09-01"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate",
+            "valueDate": "2022-09-20"
+          }
+        ],
+        "status": "completed",
+        "vaccineCode": {
+          "coding": [
+            {
+              "system": "http://capstandard.jp/iyaku.info/CodeSystem/YJ-code",
+              "code": "6313402A1014",
+              "display": "組換え沈降Ｂ型肝炎ワクチン（酵母由来）"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "occurrenceDateTime": "2023-01-20T10:30:00+09:00",
+        "lotNumber": "LOT-B200",
+        "site": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+              "code": "LA",
+              "display": "left arm"
+            }
+          ]
+        },
+        "doseQuantity": {
+          "value": 0.5,
+          "unit": "mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mL"
+        },
+        "performer": [
+          {
+            "function": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                  "code": "AP",
+                  "display": "Administering Provider"
+                }
+              ]
+            },
+            "actor": {
+              "reference": "urn:uuid:cc5b3007-9811-5a70-97c5-cb6a90bf93e3"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:Immunization"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Immunization",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:Immunization"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5627828-9f4f-5b5d-8e22-c33a0ee094fb",
+      "resource": {
+        "resourceType": "MedicationRequest",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
+            "value": "1"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex",
+            "value": "1"
+          },
+          {
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+            "value": "00000021.1.1"
+          },
+          {
+            "system": "urn:example:jp-core-demo",
+            "value": "patient02:MedicationRequest"
+          }
+        ],
+        "status": "active",
+        "intent": "order",
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://medis.or.jp/CodeSystem/master-HOT9",
+              "code": "118301602",
+              "display": "アムロジピン錠２．５ｍｇ「ＴＣＫ」"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:27451223-2cc2-566e-9715-1309c87c2c91"
+        },
+        "requester": {
+          "reference": "urn:uuid:b06bca92-33ee-51d5-b23a-fb8d76a23d52"
+        },
+        "authoredOn": "2023-03-05T12:00:00+09:00",
+        "dosageInstruction": [
+          {
+            "text": "内服 １日１回 朝食後",
+            "timing": {
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://jami.jp/CodeSystem/MedicationUsage",
+                    "code": "1013040000000000",
+                    "display": "内服 １日１回 朝食後"
+                  }
+                ]
+              }
+            },
+            "route": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+                  "code": "PO",
+                  "display": "口"
+                }
+              ]
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationIngredientStrengthStrengthType",
+                      "code": "1",
+                      "display": "製剤量"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "錠",
+                  "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUnitMERIT9Code",
+                  "code": "TAB"
+                }
+              }
+            ]
+          }
+        ],
+        "dispenseRequest": {
+          "quantity": {
+            "value": 21,
+            "unit": "錠",
+            "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUnitMERIT9Code",
+            "code": "TAB"
+          },
+          "expectedSupplyDuration": {
+            "value": 7,
+            "unit": "日",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "MedicationRequest",
+        "ifNoneExist": "identifier=urn:example:jp-core-demo|patient02:MedicationRequest"
+      }
+    }
+  ]
+}

@@ -85,7 +85,7 @@ The three upstream base packages are **not** deployed: Medplum ships the base FH
 
 ## Prerequisites
 
-- Node (see [.nvmrc](.nvmrc) at the repo root)
+- Node
 - Install dependencies:
 
   ```bash
@@ -100,11 +100,6 @@ Everything the `deploy*` scripts create is scoped to the **single Medplum projec
 - On write, Medplum stamps each resource with `meta.project` = the client's project, and it filters every read to that project (plus any linked ones). So the JP Core StructureDefinitions, ValueSets, CodeSystems (and demo patients) live only in that project.
 - The exception is **base FHIR**, which Medplum shares with all projects via an internal "synthetic R4 project". That is why base resource types are available everywhere but JP Core is not — and why `deploy.ts` also loads the base *extensions* JP Core references into your project. A brand-new project starts with only these base built-ins.
 - Terminology loaded via `CodeSystem/$import` is likewise reachable only through the project that owns the CodeSystem resource.
-
-To make JP Core available to **multiple** projects, either:
-
-1. **Run the scripts once per project**, using each project's own client credentials (simple, fully isolated); or
-2. **Deploy once into a shared project and link others to it** via Medplum's [`Project.link`](https://www.medplum.com/docs/access/projects). Consuming projects inherit resources from the linked project, gated by `Project.exportedResourceType` (include `StructureDefinition` / `ValueSet` / `CodeSystem`, or leave it empty to export everything). Editing `Project.link` / `exportedResourceType` is an admin operation on the Project resource.
 
 ## `fetch.ts` — download the packages
 

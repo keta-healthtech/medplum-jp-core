@@ -85,7 +85,7 @@ Medplum SDK **v5.1.23** 向けに構築されています。
 
 ## 前提条件
 
-- Node（リポジトリのルートにある [.nvmrc](.nvmrc) を参照）
+- Node
 - 依存関係をインストールします：
 
   ```bash
@@ -100,11 +100,6 @@ Medplum SDK **v5.1.23** 向けに構築されています。
 - 書き込み時、Medplum は各リソースに `meta.project` = クライアントのプロジェクトを付与し、読み取りはすべてそのプロジェクト（およびリンクされたプロジェクト）に限定されます。したがって、JP Core の StructureDefinition、ValueSet、CodeSystem（およびデモ患者）は、そのプロジェクト内にのみ存在します。
 - 例外となるのは **base FHIR** で、Medplum はこれを内部の「合成 R4 プロジェクト」を通じてすべてのプロジェクトと共有しています。そのため、基本のリソースタイプはどこでも利用できますが、JP Core は利用できません。また、`deploy.ts` が JP Core の参照する基本の *extension* をプロジェクトに読み込むのも、このためです。まったく新しいプロジェクトは、これらの基本の組み込みリソースのみを備えて開始されます。
 - `CodeSystem/$import` を通じて読み込まれた用語集も同様に、その CodeSystem リソースを所有するプロジェクトからのみアクセス可能です。
-
-JP Core を**複数の**プロジェクトで利用可能にするには、次のいずれかの方法があります：
-
-1. **各プロジェクトごとにスクリプトを 1 回実行する** — その際、各プロジェクト固有のクライアント認証情報を使用します（シンプルで、完全に分離されます）。あるいは、
-2. **共有プロジェクトに一度デプロイし、他のプロジェクトをそこにリンクする** — Medplum の [`Project.link`](https://www.medplum.com/docs/access/projects) を使用します。利用側のプロジェクトは、リンクされたプロジェクトからリソースを継承します。これは `Project.exportedResourceType` によって制御されます（`StructureDefinition` / `ValueSet` / `CodeSystem` を指定するか、すべてをエクスポートする場合は空のままにします）。`Project.link` / `exportedResourceType` の編集は、Project リソースに対する管理者操作です。
 
 ## `fetch.ts` — パッケージのダウンロード
 

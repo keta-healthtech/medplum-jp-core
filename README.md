@@ -1,7 +1,7 @@
 # FHIR JP Core Profile on Medplum
 
 > [!NOTE]
-> **Select language:** English | [Japanese](README.ja.md)
+> **Select language:** English | [日本語](README.ja.md)
 
 ![](doc/keta-medplum-jp-core.png)
 
@@ -150,7 +150,7 @@ Environment variables (loaded via `dotenv`, or export them yourself):
 
 1. **Auth** — `medplum.startClientLogin(clientId, clientSecret)` (client credentials flow).
 2. **Collect** — reads the top-level `package/*.json` files from each deployed package (examples, `openapi/`, `xml/` sub-directories are ignored) and keeps only the conformance resource types listed below.
-3. **Filter** — two classes of artifact are dropped up front and reported as skips rather than uploaded (see [Known limitations](#known-limitations)):
+3. **Filter** — two classes of artifact are dropped up front and reported as skips rather than uploaded:
    - **Base terminology** — CodeSystems whose canonical `url` is under a base root (`terminology.hl7.org`, `loinc.org`, `snomed.info`, `urn:iso:`, `urn:ietf:`, …). Medplum ships these built-in and forbids overwriting them (HTTP 403).
    - **Oversized CodeSystems** — anything serializing larger than `MAX_UPLOAD_BYTES` (4 MB). Medplum imports concepts into Postgres and exceeds its bind-parameter limit for large code systems.
 4. **Sanitize** — strips `ElementDefinition.example` entries missing the required `label` (a defect in some published JP Core profiles, e.g. `JP_Consent`, that Medplum otherwise rejects). Examples are non-normative, so this doesn't change how instances validate.
